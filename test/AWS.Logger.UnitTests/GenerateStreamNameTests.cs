@@ -19,7 +19,8 @@ namespace AWS.Logger.UnitTests
             {
 
             };
-            var streamName = AWSLoggerCore.GenerateStreamName(config);
+            var core = new AWSLoggerCore(config, "None");
+            var streamName = core.GenerateStreamName(config);
 
             var tokens = SplitStreamName(streamName);
             Assert.Equal(2, tokens.Length);
@@ -35,7 +36,8 @@ namespace AWS.Logger.UnitTests
             {
                 LogStreamNameSuffix = "TheSuffix"
             };
-            var streamName = AWSLoggerCore.GenerateStreamName(config);
+            var core = new AWSLoggerCore(config, "None");
+            var streamName = core.GenerateStreamName(config);
 
             var tokens = SplitStreamName(streamName);
             Assert.Equal(2, tokens.Length);
@@ -51,7 +53,8 @@ namespace AWS.Logger.UnitTests
             {
                 LogStreamNamePrefix = "ThePrefix"
             };
-            var streamName = AWSLoggerCore.GenerateStreamName(config);
+            var core = new AWSLoggerCore(config, "None");
+            var streamName = core.GenerateStreamName(config);
 
             var tokens = SplitStreamName(streamName);
             Assert.Equal(3, tokens.Length);
@@ -69,7 +72,8 @@ namespace AWS.Logger.UnitTests
                 LogStreamNamePrefix = "ThePrefix",
                 LogStreamNameSuffix = "TheSuffix"
             };
-            var streamName = AWSLoggerCore.GenerateStreamName(config);
+            var core = new AWSLoggerCore(config, "None");
+            var streamName = core.GenerateStreamName(config);
 
             var tokens = SplitStreamName(streamName);
             Assert.Equal(3, tokens.Length);
@@ -87,7 +91,8 @@ namespace AWS.Logger.UnitTests
                 LogStreamNamePrefix = "ThePrefix",
                 LogStreamNameSuffix = null
             };
-            var streamName = AWSLoggerCore.GenerateStreamName(config);
+            var core = new AWSLoggerCore(config, "None");
+            var streamName = core.GenerateStreamName(config);
 
             var tokens = SplitStreamName(streamName);
             Assert.Equal(2, tokens.Length);
@@ -104,7 +109,8 @@ namespace AWS.Logger.UnitTests
                 LogStreamNamePrefix = "ThePrefix",
                 LogStreamNameSuffix = string.Empty
             };
-            var streamName = AWSLoggerCore.GenerateStreamName(config);
+            var core = new AWSLoggerCore(config, "None");
+            var streamName = core.GenerateStreamName(config);
 
             var tokens = SplitStreamName(streamName);
             Assert.Equal(2, tokens.Length);

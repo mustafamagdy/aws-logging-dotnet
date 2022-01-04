@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 using Xunit;
@@ -24,7 +25,7 @@ namespace AWS.Logger.UnitTests
             var charCount = 240000;
             var message = new string(testChar, charCount);
             var bytesSize = Encoding.UTF8.GetByteCount(message);
-            Assert.Equal((bytesSize / 256000) + 1, AWSLoggerCore.BreakupMessage(message).Count);
+            Assert.Equal((bytesSize / 256000) + 1, AWSLoggerCore.BreakupMessage(message).Count());
         }
     }
 }
