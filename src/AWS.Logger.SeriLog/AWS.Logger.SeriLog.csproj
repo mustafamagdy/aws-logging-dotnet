@@ -24,7 +24,8 @@
     <Version>3.1.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Flynas.AWS.Logger.SeriLog</PackageId>
-    <PackageVersion>3.1.4</PackageVersion>
+    <PackageVersion>3.1.5</PackageVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
