@@ -123,5 +123,10 @@ namespace AWS.Logger
         /// </para>
         /// </summary>
         string LibraryLogFileName { get; }
+
+        /// <summary>
+        /// Log stream name, if empty will be defaulted to the current date
+        /// </summary>
+        string StreamName { get; set; }
     }
 }

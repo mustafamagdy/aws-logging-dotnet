@@ -505,7 +505,14 @@ namespace AWS.Logger.Core
                 streamName.Append(" - ");
             }
 
-            streamName.Append(DateTime.Now.ToString("yyyy/MM/ddTHH.mm.ss"));
+            if (!string.IsNullOrEmpty(config.StreamName))
+            {
+                streamName.Append(streamName);
+            }
+            else
+            {
+                streamName.Append(DateTime.Now.ToString("yyyy/MM/ddTHH.mm.ss"));
+            }
 
             var suffix = config.LogStreamNameSuffix;
             if (!string.IsNullOrEmpty(suffix))

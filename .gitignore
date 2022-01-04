@@ -5,6 +5,8 @@
 *.user
 *.xproj.user
 
+.idea/
+
 ####################
 # Build/Test folders
 ####################

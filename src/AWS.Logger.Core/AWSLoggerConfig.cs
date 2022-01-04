@@ -175,5 +175,10 @@ namespace AWS.Logger
         /// </para>
         /// </summary>
         public string LibraryLogFileName { get; set; } = "aws-logger-errors.txt";
+
+        /// <summary>
+        /// Log stream name, if empty will be defaulted to the current date 
+        /// </summary>
+        public string StreamName { get; set; }
     }
 }

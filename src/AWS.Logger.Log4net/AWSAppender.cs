@@ -199,6 +199,11 @@ namespace AWS.Logger.Log4net
         }
 
         /// <summary>
+        /// Log stream name, if empty will be defaulted to the current date
+        /// </summary>
+        public string StreamName { get; set; }
+
+        /// <summary>
         /// Initialize the appender based on the options set.
         /// </summary>
         public override void ActivateOptions()

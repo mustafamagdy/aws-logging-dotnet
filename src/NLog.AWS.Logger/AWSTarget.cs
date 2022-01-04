@@ -200,6 +200,11 @@ namespace NLog.AWS.Logger
             set { _config.LibraryLogFileName = value; }
         }
 
+        /// <summary>
+        /// Log stream name, if empty will be defaulted to the current date
+        /// </summary>
+        public string StreamName { get; set; }
+
         /// <inheritdoc/>
         protected override void InitializeTarget()
         {
